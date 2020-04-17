@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AE011B2-056B-419E-90CD-7903BA620F3B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectWareHourse</RootNamespace>
+    <AssemblyName>ProjectWareHourse</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Customers\CustomerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\CustomerMain.Designer.cs">
+      <DependentUpon>CustomerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import And Export\frmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Import And Export\frmExport.Designer.cs">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import And Export\Importfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Import And Export\Importfrm.Designer.cs">
+      <DependentUpon>Importfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import And Export\MoveToStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Import And Export\MoveToStorage.Designer.cs">
+      <DependentUpon>MoveToStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import And Export\SelectedFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Import And Export\SelectedFrm.Designer.cs">
+      <DependentUpon>SelectedFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductStores\ProductSore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductStores\ProductSore.Designer.cs">
+      <DependentUpon>ProductSore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products\ProductMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products\ProductMain.Designer.cs">
+      <DependentUpon>ProductMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stores\StoreMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stores\StoreMain.Designer.cs">
+      <DependentUpon>StoreMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supplier\SupplierMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supplier\SupplierMain.Designer.cs">
+      <DependentUpon>SupplierMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ControlHelpers.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004100156396_intialModel.cs" />
+    <Compile Include="Migrations\202004100156396_intialModel.designer.cs">
+      <DependentUpon>202004100156396_intialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004101622594_AddRequiredInTable.cs" />
+    <Compile Include="Migrations\202004101622594_AddRequiredInTable.designer.cs">
+      <DependentUpon>202004101622594_AddRequiredInTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004101700028_AddFlagIsDeleted.cs" />
+    <Compile Include="Migrations\202004101700028_AddFlagIsDeleted.designer.cs">
+      <DependentUpon>202004101700028_AddFlagIsDeleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004111811065_AddCodeToProduct.cs" />
+    <Compile Include="Migrations\202004111811065_AddCodeToProduct.designer.cs">
+      <DependentUpon>202004111811065_AddCodeToProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121411482_AddTableOrderAndOrderDetails.cs" />
+    <Compile Include="Migrations\202004121411482_AddTableOrderAndOrderDetails.designer.cs">
+      <DependentUpon>202004121411482_AddTableOrderAndOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121414526_AddTableOrderAndOrderDetailsTable.cs" />
+    <Compile Include="Migrations\202004121414526_AddTableOrderAndOrderDetailsTable.designer.cs">
+      <DependentUpon>202004121414526_AddTableOrderAndOrderDetailsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004171047555_AddWareHourseTransformation.cs" />
+    <Compile Include="Migrations\202004171047555_AddWareHourseTransformation.designer.cs">
+      <DependentUpon>202004171047555_AddWareHourseTransformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004171057331_AddWareHourseTransformationDate.cs" />
+    <Compile Include="Migrations\202004171057331_AddWareHourseTransformationDate.designer.cs">
+      <DependentUpon>202004171057331_AddWareHourseTransformationDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004171105285_AddWareHourseColumnStorageName.cs" />
+    <Compile Include="Migrations\202004171105285_AddWareHourseColumnStorageName.designer.cs">
+      <DependentUpon>202004171105285_AddWareHourseColumnStorageName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004171115356_AddExpireDateAndProductionDate.cs" />
+    <Compile Include="Migrations\202004171115356_AddExpireDateAndProductionDate.designer.cs">
+      <DependentUpon>202004171115356_AddExpireDateAndProductionDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductStore.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\TransformationLogs.cs" />
+    <Compile Include="Models\TypeOfOrders.cs" />
+    <Compile Include="Models\TypeOfPerson.cs" />
+    <Compile Include="Models\WareHourseContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\MyValidationContext.cs" />
+    <Compile Include="Validation\ValidationContext.cs" />
+    <Compile Include="ViewModel\DataStoreViewModel.cs" />
+    <Compile Include="WareHouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WareHouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Customers\CustomerMain.resx">
+      <DependentUpon>CustomerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Import And Export\frmExport.resx">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Import And Export\Importfrm.resx">
+      <DependentUpon>Importfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Import And Export\MoveToStorage.resx">
+      <DependentUpon>MoveToStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Import And Export\SelectedFrm.resx">
+      <DependentUpon>SelectedFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductStores\ProductSore.resx">
+      <DependentUpon>ProductSore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products\ProductMain.resx">
+      <DependentUpon>ProductMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stores\StoreMain.resx">
+      <DependentUpon>StoreMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supplier\SupplierMain.resx">
+      <DependentUpon>SupplierMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004100156396_intialModel.resx">
+      <DependentUpon>202004100156396_intialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101622594_AddRequiredInTable.resx">
+      <DependentUpon>202004101622594_AddRequiredInTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101700028_AddFlagIsDeleted.resx">
+      <DependentUpon>202004101700028_AddFlagIsDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004111811065_AddCodeToProduct.resx">
+      <DependentUpon>202004111811065_AddCodeToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121411482_AddTableOrderAndOrderDetails.resx">
+      <DependentUpon>202004121411482_AddTableOrderAndOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121414526_AddTableOrderAndOrderDetailsTable.resx">
+      <DependentUpon>202004121414526_AddTableOrderAndOrderDetailsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004171047555_AddWareHourseTransformation.resx">
+      <DependentUpon>202004171047555_AddWareHourseTransformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004171057331_AddWareHourseTransformationDate.resx">
+      <DependentUpon>202004171057331_AddWareHourseTransformationDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004171105285_AddWareHourseColumnStorageName.resx">
+      <DependentUpon>202004171105285_AddWareHourseColumnStorageName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004171115356_AddExpireDateAndProductionDate.resx">
+      <DependentUpon>202004171115356_AddExpireDateAndProductionDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WareHouseDataSet.xsc">
+      <DependentUpon>WareHouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WareHouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WareHouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WareHouseDataSet.xss">
+      <DependentUpon>WareHouseDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>
